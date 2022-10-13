@@ -21,19 +21,19 @@
     </properties>
     
     <dependencies>
-      <dependency>
+        <dependency>
             <groupId>com.heronarts</groupId>
             <artifactId>lx</artifactId>
             <version>${lx.version}</version>
             <scope>provided</scope>
         </dependency>
-		<dependency>
+        <dependency>
             <groupId>com.heronarts</groupId>
             <artifactId>glx</artifactId>
             <version>${lx.version}</version>
             <scope>provided</scope>
         </dependency>        
-		<dependency>
+        <dependency>
             <groupId>com.heronarts</groupId>
             <artifactId>glxstudio</artifactId>
             <version>${lx.version}</version>
@@ -53,8 +53,7 @@
                         <arg>-Xpkginfo:always</arg>
                     </compilerArgs>
                 </configuration>
-            </plugin>
-            
-		</plugins>
-	</build>
+            </plugin> 
+        </plugins>
+    </build>
 </project>
