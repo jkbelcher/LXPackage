@@ -10,9 +10,8 @@
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                        
-		<lx.version>0.4.2-SNAPSHOT</lx.version>
-		      
+
+        <lx.version>0.4.2-SNAPSHOT</lx.version>		      
         <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
         <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
@@ -22,7 +21,7 @@
     </properties>
     
     <dependencies>
-		<dependency>
+      <dependency>
             <groupId>com.heronarts</groupId>
             <artifactId>lx</artifactId>
             <version>${lx.version}</version>
