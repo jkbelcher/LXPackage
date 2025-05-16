@@ -34,5 +34,5 @@ _Note that `mvn install` does **not** automatically copy static files from [`src
 
 ### Need Help?
 
-Join us on [Discord &rarr;](https://chromatik.co/discord)
-Or send an email: [support@chromatik.co](support@chromatik.co)
+Join us on [Discord &rarr;](https://chromatik.co/discord)<br />
+Or send an email to [support@chromatik.co](support@chromatik.co)
