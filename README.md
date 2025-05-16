@@ -31,3 +31,8 @@ Packages are distributed as a JAR file containing all of the above copmonents.
 - Install via `mvn install`
 
 _Note that `mvn install` does **not** automatically copy static files from [`src/main/resources`](src/main/resources) into your root `~/Chromatik` folder. You can either perform this step manually, or by importing the package using the Chromatik UI._
+
+### Need Help?
+
+Join us on [Discord &rarr;](https://chromatik.co/discord)
+Or send an email: [support@chromatik.co](support@chromatik.co)
