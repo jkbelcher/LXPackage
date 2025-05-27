@@ -8,6 +8,8 @@ Please note that LX is not open-source software. The license grants permission t
 
 This is a template repository used to demonstrate how to build a package for [Chromatik](https://chromatik.co/) using the [LX](https://github.com/heronarts/LX/) framework.
 
+Learn to code in LX via the [Chromatik Developer Guide &rarr;](https://chromatik.co/develop/)
+
 ### Package Structure
 
 - Metadata
@@ -34,5 +36,6 @@ _Note that `mvn install` does **not** automatically copy static files from [`src
 
 ### Need Help?
 
-Join us on [Discord &rarr;](https://chromatik.co/discord)<br />
+Join us on [Discord &rarr;](https://chromatik.co/discord)
+
 Or send an email to [support@chromatik.co](support@chromatik.co)
