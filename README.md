@@ -27,12 +27,13 @@ Learn to code in LX via the [Chromatik Developer Guide &rarr;](https://chromatik
 
 ### Building and Installation
 
-Packages are distributed as a JAR file containing all of the above copmonents.
+Packages are distributed as a JAR file containing all of the above components.
 
 - Build with `mvn package`
-- Install via `mvn install`
+- Install with `mvn install`
+- Install to Chromatik package folder with `mvn -Pinstall install`
 
-_Note that `mvn install` does **not** automatically copy static files from [`src/main/resources`](src/main/resources) into your root `~/Chromatik` folder. You can either perform this step manually, or by importing the package using the Chromatik UI._
+_Note that `mvn -Pinstall install` does **not** automatically copy static files from [`src/main/resources`](src/main/resources) into your root `~/Chromatik` folder. You can either perform this step manually, or by importing the package using the Chromatik UI._
 
 ### Need Help?
 
