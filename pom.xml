@@ -8,10 +8,10 @@
     <packaging>jar</packaging>
 
     <properties>
-        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <lx.version>1.0.1-SNAPSHOT</lx.version>
+        <lx.version>1.2.1</lx.version>
         <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
         <exec-maven-plugin.version>3.1.1</exec-maven-plugin.version>
         <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
@@ -61,42 +61,59 @@
                 <version>${maven-resources-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>copy-files-on-build</id>
-                        <phase>install</phase>
+                        <id>filter-resources</id>
+                        <phase>process-resources</phase>
                         <goals>
-                            <goal>copy-resources</goal>
+                            <goal>resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${user.home}/Chromatik/Packages</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${project.build.directory}</directory>
-                                    <include>${project.artifactId}-${project.version}.jar</include>
-                                    <filtering>false</filtering>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>lx.package</include>
+                                    </includes>
+                                    <filtering>true</filtering>
                                 </resource>
                             </resources>
                         </configuration>
                     </execution>
-                    <execution>
-	                    <id>filter-resources</id>
-	                    <phase>process-resources</phase>
-	                    <goals>
-	                        <goal>resources</goal>
-	                    </goals>
-	                    <configuration>
-	                        <resources>
-	                            <resource>
-	                                <directory>src/main/resources</directory>
-	                                <includes>
-	                                    <include>lx.package</include>
-	                                </includes>
-	                                <filtering>true</filtering>
-	                            </resource>
-	                        </resources>
-	                    </configuration>
-	                </execution>
                 </executions>
-            </plugin> 
+            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>install</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>${maven-resources-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>copy-files-on-build</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>copy-resources</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>${user.home}/Chromatik/Packages</outputDirectory>
+                                    <resources>
+                                        <resource>
+                                            <directory>${project.build.directory}</directory>
+                                            <include>${project.artifactId}-${project.version}.jar</include>
+                                            <filtering>false</filtering>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
