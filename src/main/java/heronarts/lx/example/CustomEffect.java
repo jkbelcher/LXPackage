@@ -20,13 +20,13 @@ package heronarts.lx.example;
 
 import heronarts.lx.LX;
 import heronarts.lx.LXCategory;
-import heronarts.lx.LXComponentName;
+import heronarts.lx.LXComponent;
 import heronarts.lx.color.LXColor;
 import heronarts.lx.effect.LXEffect;
 import heronarts.lx.parameter.CompoundParameter;
 
 @LXCategory("Custom")
-@LXComponentName("Custom")
+@LXComponent.Name("Custom")
 public class CustomEffect extends LXEffect {
 
   public final CompoundParameter knob =

@@ -20,13 +20,13 @@ package heronarts.lx.example;
 
 import heronarts.lx.LX;
 import heronarts.lx.LXCategory;
-import heronarts.lx.LXComponentName;
+import heronarts.lx.LXComponent;
 import heronarts.lx.color.LXColor;
 import heronarts.lx.parameter.CompoundParameter;
 import heronarts.lx.pattern.LXPattern;
 
 @LXCategory("Custom")
-@LXComponentName("Custom")
+@LXComponent.Name("Custom")
 public class CustomPattern extends LXPattern {
 
   public final CompoundParameter knob =
