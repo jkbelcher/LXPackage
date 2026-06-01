@@ -5,6 +5,10 @@
 .project
 .settings
 
+# Editor / IDE
+.idea/
+.vscode/
+.settings/
 
 # Log file
 *.log
